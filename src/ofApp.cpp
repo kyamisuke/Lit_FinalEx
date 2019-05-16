@@ -2,17 +2,23 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+    ofSetFrameRate(60);
+    
+    baseScene* sT = new SceneTree();
+    
+    scenes.push_back(sT);
+    currentScene = 0;
+    scenes[currentScene]->setup();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+    scenes[currentScene]->update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+    scenes[currentScene]->draw();
 }
 
 //--------------------------------------------------------------

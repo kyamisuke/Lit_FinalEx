@@ -1,5 +1,4 @@
 #include "SceneTree.h"
-#include "branch.h"
 
 //--------------------------------------------------------------
 void SceneTree::setup(){
@@ -11,7 +10,7 @@ void SceneTree::setup(){
     
     if (!sound.load("Broken Heart.mp3")) {
         printf("load error!\n");
-        exit();
+        //exit();
     }
     sound.setVolume(1.0);
     sound.play();

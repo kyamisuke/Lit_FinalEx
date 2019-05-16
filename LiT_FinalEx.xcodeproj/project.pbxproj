@@ -29,9 +29,9 @@
 		AFF405F0228D24380067C134 /* baseScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = baseScene.h; sourceTree = "<group>"; };
 		AFF405F1228D25180067C134 /* SceneTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneTree.h; sourceTree = "<group>"; };
 		AFF405F2228D255B0067C134 /* SceneTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneTree.cpp; sourceTree = "<group>"; };
-		AFF405F3228D255B0067C134 /* SceneTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SceneTree.hpp; sourceTree = "<group>"; };
 		AFF405F5228D259C0067C134 /* branch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = branch.h; sourceTree = "<group>"; };
 		AFF405F6228D259C0067C134 /* branch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = branch.cpp; sourceTree = "<group>"; };
+		AFF405F8228D337C0067C134 /* SceneEye.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneEye.h; sourceTree = "<group>"; };
 		E42962AC2163EDD300A6A9E2 /* ofCamera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ofCamera.cpp; path = ../../../libs/openFrameworks/3d/ofCamera.cpp; sourceTree = SOURCE_ROOT; };
 		E42962AD2163EDD300A6A9E2 /* ofMesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ofMesh.h; path = ../../../libs/openFrameworks/3d/ofMesh.h; sourceTree = SOURCE_ROOT; };
 		E42962AE2163EDD300A6A9E2 /* ofNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ofNode.h; path = ../../../libs/openFrameworks/3d/ofNode.h; sourceTree = SOURCE_ROOT; };
@@ -544,9 +544,9 @@
 				AFF405F0228D24380067C134 /* baseScene.h */,
 				AFF405F1228D25180067C134 /* SceneTree.h */,
 				AFF405F2228D255B0067C134 /* SceneTree.cpp */,
-				AFF405F3228D255B0067C134 /* SceneTree.hpp */,
 				AFF405F6228D259C0067C134 /* branch.cpp */,
 				AFF405F5228D259C0067C134 /* branch.h */,
+				AFF405F8228D337C0067C134 /* SceneEye.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;

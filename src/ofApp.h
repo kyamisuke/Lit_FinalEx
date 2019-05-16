@@ -24,5 +24,5 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
     vector <baseScene *> scenes;
-    int cuurentScene;
+    int currentScene;
 };

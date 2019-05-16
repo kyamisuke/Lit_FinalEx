@@ -5,6 +5,8 @@
 //  Created by 村上航輔 on 2019/05/16.
 //
 
+#pragma once
+
 #ifndef baseScean_h
 #define baseScean_h
 
@@ -14,6 +16,7 @@
 #include "ofMain.h"
 
 class baseScene {
+    
 public:
     virtual void setup(){};
     virtual void update(){};
@@ -30,4 +33,5 @@ public:
     virtual void windowResized(int w, int h){};
     virtual void dragEvent(ofDragInfo dragInfo){};
     virtual void gotMessage(ofMessage msg){};
+    
 };

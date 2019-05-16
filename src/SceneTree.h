@@ -11,11 +11,19 @@
 
 #endif /* SceneTree_h */
 #include "ofMain.h"
+#include "baseScene.h"
+#include "branch.h"
 
 class SceneTree : public baseScene{
+    
 public:
     void setup();
     void update();
     void draw();
+    
+    vector <branch> branches;
+    int count = 0;
+    ofSoundPlayer sound;
+    float *vol;
     
 };
