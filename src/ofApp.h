@@ -1,6 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
+#include "baseScene.h"
+#include "SceneTree.h"
 
 class ofApp : public ofBaseApp{
 
@@ -21,4 +23,6 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+    vector <baseScene *> scenes;
+    int cuurentScene;
 };
