@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "baseScene.h"
 #include "SceneTree.h"
+#include "SceneWave.h"
 
 class ofApp : public ofBaseApp{
 
@@ -25,4 +26,8 @@ class ofApp : public ofBaseApp{
 		
     vector <baseScene *> scenes;
     int currentScene;
+    ofSoundPlayer sound;
+    float* volume;
+    float* fftSmoothed;
+    int nBndsToGet;
 };

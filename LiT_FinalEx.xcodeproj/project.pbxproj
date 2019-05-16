@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF5FC535228D777800799C97 /* Wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF5FC534228D777800799C97 /* Wave.cpp */; };
+		AF5FC538228D77A700799C97 /* SceneWave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF5FC536228D77A700799C97 /* SceneWave.cpp */; };
 		AFF405F4228D255B0067C134 /* SceneTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFF405F2228D255B0067C134 /* SceneTree.cpp */; };
 		AFF405F7228D259C0067C134 /* branch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFF405F6228D259C0067C134 /* branch.cpp */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
@@ -26,6 +28,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF5FC532228D76B900799C97 /* SceneWave.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneWave.h; sourceTree = "<group>"; };
+		AF5FC533228D777800799C97 /* Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wave.h; sourceTree = "<group>"; };
+		AF5FC534228D777800799C97 /* Wave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wave.cpp; sourceTree = "<group>"; };
+		AF5FC536228D77A700799C97 /* SceneWave.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneWave.cpp; sourceTree = "<group>"; };
 		AFF405F0228D24380067C134 /* baseScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = baseScene.h; sourceTree = "<group>"; };
 		AFF405F1228D25180067C134 /* SceneTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneTree.h; sourceTree = "<group>"; };
 		AFF405F2228D255B0067C134 /* SceneTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneTree.cpp; sourceTree = "<group>"; };
@@ -547,6 +553,10 @@
 				AFF405F6228D259C0067C134 /* branch.cpp */,
 				AFF405F5228D259C0067C134 /* branch.h */,
 				AFF405F8228D337C0067C134 /* SceneEye.h */,
+				AF5FC532228D76B900799C97 /* SceneWave.h */,
+				AF5FC534228D777800799C97 /* Wave.cpp */,
+				AF5FC533228D777800799C97 /* Wave.h */,
+				AF5FC536228D77A700799C97 /* SceneWave.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -650,9 +660,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				AF5FC538228D77A700799C97 /* SceneWave.cpp in Sources */,
 				AFF405F7228D259C0067C134 /* branch.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				AFF405F4228D255B0067C134 /* SceneTree.cpp in Sources */,
+				AF5FC535228D777800799C97 /* Wave.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
