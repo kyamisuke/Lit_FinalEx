@@ -12,9 +12,11 @@ void ofApp::setup(){
         
     baseScene* sT = new SceneTree();
     baseScene* sW = new SceneWave();
+    baseScene* sE = new SceneEye();
     
     scenes.push_back(sT);
     scenes.push_back(sW);
+    scenes.push_back(sE);
     currentScene = 0;
     scenes[currentScene]->setup();
 }
@@ -33,7 +35,7 @@ void ofApp::draw(){
 void ofApp::keyPressed(int key){
     if (key == ' ') {
         currentScene++;
-        currentScene %= 2;
+        currentScene %= 3;
         scenes[currentScene]->setup();
     }
 }
