@@ -5,6 +5,7 @@
 #include "SceneTree.h"
 #include "SceneWave.h"
 #include "SceneEye.h"
+#include "SceneText.h"
 
 class ofApp : public ofBaseApp{
 

@@ -9,11 +9,13 @@ void ofApp::setup(){
     sound.setVolume(1.0);
     sound.setLoop(true);
     sound.play();
-        
+
+    baseScene* sTe = new SceneText();
     baseScene* sT = new SceneTree();
     baseScene* sW = new SceneWave();
     baseScene* sE = new SceneEye();
-    
+
+    scenes.push_back(sTe);
     scenes.push_back(sT);
     scenes.push_back(sW);
     scenes.push_back(sE);
@@ -35,7 +37,7 @@ void ofApp::draw(){
 void ofApp::keyPressed(int key){
     if (key == ' ') {
         currentScene++;
-        currentScene %= 3;
+        currentScene %= 4;
         scenes[currentScene]->setup();
     }
 }
@@ -57,7 +59,8 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+    printf("passmouse\n");
+    scenes[currentScene]->mousePressed(x, y, button);
 }
 
 //--------------------------------------------------------------

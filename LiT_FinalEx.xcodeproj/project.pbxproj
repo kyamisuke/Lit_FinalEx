@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF07BBE8228EFD140017AA24 /* SceneEye.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF07BBE6228EFD140017AA24 /* SceneEye.cpp */; };
+		AF07BBEC228F2A750017AA24 /* SceneText.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF07BBEA228F2A750017AA24 /* SceneText.cpp */; };
 		AF5FC535228D777800799C97 /* Wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF5FC534228D777800799C97 /* Wave.cpp */; };
 		AF5FC538228D77A700799C97 /* SceneWave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF5FC536228D77A700799C97 /* SceneWave.cpp */; };
 		AFF405F4228D255B0067C134 /* SceneTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFF405F2228D255B0067C134 /* SceneTree.cpp */; };
@@ -30,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		AF07BBE6228EFD140017AA24 /* SceneEye.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneEye.cpp; sourceTree = "<group>"; };
+		AF07BBE9228F2A640017AA24 /* SceneText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneText.h; sourceTree = "<group>"; };
+		AF07BBEA228F2A750017AA24 /* SceneText.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneText.cpp; sourceTree = "<group>"; };
 		AF5FC532228D76B900799C97 /* SceneWave.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneWave.h; sourceTree = "<group>"; };
 		AF5FC533228D777800799C97 /* Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wave.h; sourceTree = "<group>"; };
 		AF5FC534228D777800799C97 /* Wave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wave.cpp; sourceTree = "<group>"; };
@@ -560,6 +563,8 @@
 				AF5FC533228D777800799C97 /* Wave.h */,
 				AF5FC536228D77A700799C97 /* SceneWave.cpp */,
 				AF07BBE6228EFD140017AA24 /* SceneEye.cpp */,
+				AF07BBE9228F2A640017AA24 /* SceneText.h */,
+				AF07BBEA228F2A750017AA24 /* SceneText.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -663,6 +668,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF07BBE8228EFD140017AA24 /* SceneEye.cpp in Sources */,
+				AF07BBEC228F2A750017AA24 /* SceneText.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				AF5FC538228D77A700799C97 /* SceneWave.cpp in Sources */,
 				AFF405F7228D259C0067C134 /* branch.cpp in Sources */,

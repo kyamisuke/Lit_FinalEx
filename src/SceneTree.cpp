@@ -2,6 +2,7 @@
 
 //--------------------------------------------------------------
 void SceneTree::setup(){
+    ofBackground(0);
     ofSetBackgroundAuto(false);
     ofSetFrameRate(30);
     branch newbranch = branch(ofGetWidth()/2, ofGetHeight(), ofGetWidth()/2, ofGetHeight()-80.0, 80.0, 0.0);
