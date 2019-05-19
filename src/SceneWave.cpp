@@ -25,6 +25,9 @@ void SceneWave::update(){
 
 //--------------------------------------------------------------
 void SceneWave::draw(){
+    ofSetColor(0, 32);
+    ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
+    
     for (int i=0; i < wavesNum; i++) {
         waves[i].display(fftSmoothed[i+10]);
     }

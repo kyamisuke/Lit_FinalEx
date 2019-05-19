@@ -21,6 +21,7 @@ void SceneEye::reset() {
 void SceneEye::setup(){
     ofBackground(0, 32);
     ofSetFrameRate(60);
+    ofSetBackgroundAuto(false);
     ofSetWindowTitle(ofToString((float)ofGetFrameRate()));
     reset();
     
@@ -77,7 +78,7 @@ void SceneEye::draw(){
         if (m[i] < 0) ofSetColor(30, 100, 255);
         else ofSetColor(100, 0, 100);
         
-        ofDrawCircle(x[i], y[i], 2);
+        ofDrawCircle(x[i], y[i], 2+volume[40]*200);
     }
     
 }

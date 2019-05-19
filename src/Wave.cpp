@@ -29,10 +29,10 @@ Wave::Wave(int i) {
     
     int alpha = 50;
     
-    colors[0].set(100, alpha);
-    colors[1].set(34,116,204, alpha);
-    colors[2].set(79,79,243, alpha);
-    colors[3].set(51, 0, 102, alpha);
+    colors[0].set(100);
+    colors[1].set(34,116,204);
+    colors[2].set(79,79,243);
+    colors[3].set(51, 0, 102);
 }
 
 void Wave::display(float vol) {
@@ -44,7 +44,7 @@ void Wave::display(float vol) {
     x = R*sin(t*DEG_TO_RAD) + sx;
     y = R*cos(t*DEG_TO_RAD) + sy;
     ofSetColor(colors[c]);
-    ofDrawCircle(x, y, vol*15);
+    ofDrawCircle(x, y, vol*50);
     R += Rs;
     
     if (R > Rmax) {

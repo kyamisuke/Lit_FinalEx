@@ -13,11 +13,13 @@ void ofApp::setup(){
     baseScene* sTe = new SceneText();
     baseScene* sT = new SceneTree();
     baseScene* sW = new SceneWave();
+    baseScene* sF = new SceneFlow();
     baseScene* sE = new SceneEye();
 
     scenes.push_back(sTe);
     scenes.push_back(sT);
     scenes.push_back(sW);
+    scenes.push_back(sF);
     scenes.push_back(sE);
     currentScene = 0;
     scenes[currentScene]->setup();
@@ -37,7 +39,7 @@ void ofApp::draw(){
 void ofApp::keyPressed(int key){
     if (key == ' ') {
         currentScene++;
-        currentScene %= 4;
+        currentScene %= 5;
         scenes[currentScene]->setup();
     }
 }
