@@ -10,16 +10,18 @@ void ofApp::setup(){
     sound.setLoop(true);
     sound.play();
 
-    baseScene* sTe = new SceneText();
-    baseScene* sT = new SceneTree();
-    baseScene* sW = new SceneWave();
-    baseScene* sF = new SceneFlow();
-    baseScene* sE = new SceneEye();
+    baseScene* sTe  = new SceneText();
+    baseScene* sT   = new SceneTree();
+    baseScene* sW   = new SceneWave();
+    baseScene* sF   = new SceneFlow();
+    baseScene* sL   = new SceneLine();
+    baseScene* sE   = new SceneEye();
 
     scenes.push_back(sTe);
     scenes.push_back(sT);
     scenes.push_back(sW);
     scenes.push_back(sF);
+    scenes.push_back(sL);
     scenes.push_back(sE);
     currentScene = 0;
     scenes[currentScene]->setup();
@@ -39,15 +41,15 @@ void ofApp::draw(){
 void ofApp::keyPressed(int key){
     if (key == ' ') {
         currentScene++;
-        currentScene %= 5;
-        scenes[currentScene]->setup();
+        currentScene %= scenes.size();
     } else if (key == '1') {
         currentScene = 3;
-        scenes[currentScene]->setup();
     } else if (key == '2') {
         currentScene = 4;
-        scenes[currentScene]->setup();
+    } else if (key == '3') {
+        currentScene = 5;
     }
+    scenes[currentScene]->setup();
 }
 
 //--------------------------------------------------------------

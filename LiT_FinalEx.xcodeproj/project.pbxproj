@@ -12,6 +12,7 @@
 		AF5FC535228D777800799C97 /* Wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF5FC534228D777800799C97 /* Wave.cpp */; };
 		AF5FC538228D77A700799C97 /* SceneWave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF5FC536228D77A700799C97 /* SceneWave.cpp */; };
 		AF60CDCE2291926D0051C046 /* SceneFlow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF60CDCC2291926D0051C046 /* SceneFlow.cpp */; };
+		AF6C8AD82292751D00457B4C /* SceneLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF6C8AD62292751D00457B4C /* SceneLine.cpp */; };
 		AFF405F4228D255B0067C134 /* SceneTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFF405F2228D255B0067C134 /* SceneTree.cpp */; };
 		AFF405F7228D259C0067C134 /* branch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFF405F6228D259C0067C134 /* branch.cpp */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
@@ -40,6 +41,8 @@
 		AF5FC536228D77A700799C97 /* SceneWave.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneWave.cpp; sourceTree = "<group>"; };
 		AF60CDCC2291926D0051C046 /* SceneFlow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneFlow.cpp; sourceTree = "<group>"; };
 		AF60CDCF229192A70051C046 /* SceneFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneFlow.h; sourceTree = "<group>"; };
+		AF6C8AD62292751D00457B4C /* SceneLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneLine.cpp; sourceTree = "<group>"; };
+		AF6C8AD92292753500457B4C /* SceneLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneLine.h; sourceTree = "<group>"; };
 		AFF405F0228D24380067C134 /* baseScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = baseScene.h; sourceTree = "<group>"; };
 		AFF405F1228D25180067C134 /* SceneTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneTree.h; sourceTree = "<group>"; };
 		AFF405F2228D255B0067C134 /* SceneTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneTree.cpp; sourceTree = "<group>"; };
@@ -570,6 +573,8 @@
 				AF07BBEA228F2A750017AA24 /* SceneText.cpp */,
 				AF60CDCC2291926D0051C046 /* SceneFlow.cpp */,
 				AF60CDCF229192A70051C046 /* SceneFlow.h */,
+				AF6C8AD62292751D00457B4C /* SceneLine.cpp */,
+				AF6C8AD92292753500457B4C /* SceneLine.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -674,6 +679,7 @@
 			files = (
 				AF07BBE8228EFD140017AA24 /* SceneEye.cpp in Sources */,
 				AF07BBEC228F2A750017AA24 /* SceneText.cpp in Sources */,
+				AF6C8AD82292751D00457B4C /* SceneLine.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				AF5FC538228D77A700799C97 /* SceneWave.cpp in Sources */,
 				AFF405F7228D259C0067C134 /* branch.cpp in Sources */,

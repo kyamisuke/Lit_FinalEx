@@ -7,6 +7,7 @@
 #include "SceneEye.h"
 #include "SceneText.h"
 #include "SceneFlow.h"
+#include "SceneLine.h"
 
 class ofApp : public ofBaseApp{
 

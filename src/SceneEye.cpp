@@ -21,9 +21,9 @@ float SceneEye::normRandom() {
     float b = 1 - ofRandom(1);
     float c = sqrt(-2 * log(a));
     if (0.5 - ofRandom(1) > 0) {
-        return c * sin(2*b);
+        return c * sin(2*b*PI);
     } else {
-        return c * cos(2*b);
+        return c * cos(2*b*PI);
     }
 }
 
@@ -55,7 +55,7 @@ void SceneEye::update(){
 
 //--------------------------------------------------------------
 void SceneEye::draw(){
-    if (fftSmoothed[40] - preVol > 0.04) {
+    if (fftSmoothed[40] - preVol > 0.03) {
         reset();
         mouseX = ofRandom(ofGetWidth());
         mouseY = ofRandom(ofGetHeight());
