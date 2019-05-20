@@ -41,6 +41,12 @@ void ofApp::keyPressed(int key){
         currentScene++;
         currentScene %= 5;
         scenes[currentScene]->setup();
+    } else if (key == '1') {
+        currentScene = 3;
+        scenes[currentScene]->setup();
+    } else if (key == '2') {
+        currentScene = 4;
+        scenes[currentScene]->setup();
     }
 }
 

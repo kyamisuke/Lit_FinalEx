@@ -18,6 +18,7 @@
 class SceneText : public baseScene {
 public:
     void setup();
+    void update();
     void draw();
     void mousePressed(int x, int y, int button);
     
@@ -43,5 +44,12 @@ public:
     int count=0;
     
     int current = 0;
+    
+    ofSoundPlayer sound;
+    float *volume;
+    float *fftSmoothed;
+    
+    int nBandsToGet;
+
     
 };

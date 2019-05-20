@@ -10,7 +10,6 @@
 //--------------------------------------------------------------
 void SceneFlow::setup(){
     ofBackground(0);
-    ofSetBackgroundAuto(true);
     rot = 0;
     ofSetFrameRate(60);
     
@@ -37,23 +36,40 @@ void SceneFlow::update(){
 
 //--------------------------------------------------------------
 void SceneFlow::draw(){
+    if (fftSmoothed[40] - preVol > 0.03) {
+        ofSetColor(255, 32);
+        ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
+        inv = true;
+    } else {
+        ofSetColor(0, 32);
+        ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
+    }
+    
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
     ofRotateDeg(rot);
     for (int i=0; i<500; i++) {
         circle = 200 + 150*sin(ofGetSystemTimeMillis()*freq*i);
-        //        circle = 200 + 150*sin(ofGetSystemTimeMillis()*volume[40]*0.00001*i);
         col = ofMap(circle, 50, 350, 255, 60);
+        ofColor c = ofColor(74, 0, col);
         r = ofMap(circle, 50, 350, 5, 2);
-        ofSetColor(74, 0, col);
-        ofDrawCircle(circle*cos(i), circle*sin(i)+volume[40]*400, r);
-        ofPushMatrix();
-        ofTranslate(circle*cos(i), circle*sin(i));
-        for (int i=0; i < 360; i+= 60) {
-            ofRotateDeg(i);
-            ofDrawTriangle(circle*cos(i), circle*sin(i)+volume[40]*400, circle*cos(i)-r*0.5, circle*sin(i)-r*0.5*pow(3, 0.5), circle*cos(i)+r*0.5, circle*sin(i)-r*0.5*pow(3, 0.5));
+        if (inv) {
+            c.invert();
+            inv = true;
         }
-        ofPopMatrix();
+        ofSetColor(c);
+        ofDrawCircle(circle*cos(i)+fftSmoothed[40]*400, circle*sin(i)+fftSmoothed[40]*400, r);
+        preVol = fftSmoothed[40];
+//        ofPushMatrix();
+//        ofTranslate(circle*cos(i)+fftSmoothed[40]*400, circle*sin(i)+fftSmoothed[40]*400);
+//        for (int i=0; i < 3; i++) {
+//            ofRotateDeg(i*120);
+//            ofDrawTriangle(0, r+fftSmoothed[40]*200, -r*0.5, -r*0.5*pow(3, 0.5), r*0.5, -r*0.5*pow(3, 0.5));
+//        }
+//        ofPopMatrix();
         rot += 0.00005;
+    }
+    if (inv) {
+        inv = false;
     }
 }
 

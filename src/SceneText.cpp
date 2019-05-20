@@ -51,8 +51,9 @@ void SceneText::setup(){
     str.push_back("My name");
     str.push_back("is");
     str.push_back("DJ kyami");
-    str.push_back("I crate song");
+    str.push_back("I create song");
     str.push_back("-Broken Heart-");
+    //str.push_back("💔");
     
     fbo.allocate(ofGetWidth(), ofGetHeight(), GL_RGBA);
     //reset();
@@ -64,9 +65,26 @@ void SceneText::setup(){
         gx[i] = ofRandomWidth();;
         gy[i] = ofRandomHeight();
     }
+    
+    fftSmoothed = new float[8192];
+    for (int i=0; i<8192; i++) fftSmoothed[i] = 0;
+    nBandsToGet = 60;
 }
 
 //--------------------------------------------------------------
+
+void SceneText::update() {
+    ofSoundUpdate();
+    volume = ofSoundGetSpectrum(nBandsToGet);
+    
+    for (int i=0; i<nBandsToGet; i++) {
+        fftSmoothed[i] *= 0.96f;
+        if (fftSmoothed[i] < volume[i]) fftSmoothed[i] = volume[i];
+    }
+}
+
+//--------------------------------------------------------------
+
 void SceneText::draw(){
     ofSetColor(0, 32);
     ofDrawRectangle(0, 0, width, height);
@@ -84,8 +102,8 @@ void SceneText::draw(){
         float dx = gx[i] - x[i];
         float dy = gy[i] - y[i];
         
-        dx *= 0.02;
-        dy *= 0.02;
+        dx *= 0.03;
+        dy *= 0.03;
         
         vx[i] = dx;
         vy[i] = dy;
@@ -94,7 +112,7 @@ void SceneText::draw(){
         y[i] += vy[i];
         
         ofSetColor(102,153,255);
-        ofDrawCircle(x[i], y[i], 2);
+        ofDrawCircle(x[i], y[i], 2+fftSmoothed[5]*50);
     }
     
 }
@@ -104,5 +122,5 @@ void SceneText::draw(){
 void SceneText::mousePressed(int x, int y, int button){
     reset();
     current++;
-    current %= 6;
+    current %= str.size();
 }

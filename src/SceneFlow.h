@@ -32,6 +32,10 @@ public:
     float *volume;
     float *fftSmoothed;
     
+    float preVol=0;
+    
+    bool inv=false;
+        
     int nBandsToGet;
     
 };

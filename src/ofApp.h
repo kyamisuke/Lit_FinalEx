@@ -32,5 +32,4 @@ class ofApp : public ofBaseApp{
     ofSoundPlayer sound;
     float* volume;
     float* fftSmoothed;
-    int nBndsToGet;
 };
