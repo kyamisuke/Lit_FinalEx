@@ -42,6 +42,8 @@ public:
     ofColor c1 = ofColor(30, 100, 255);
     ofColor c2 = ofColor(100, 0, 100);
     ofColor bg = ofColor(0, 32);
+    
+    float preVol=0;
     bool inv = false;
     
     int nBandsToGet;

@@ -9,12 +9,24 @@
 
 void SceneEye::reset() {
     for (int i=0; i<n; i++) {
-        m[i] = ofRandom(-1, 1)*16;
+        m[i] = normRandom()*16;
         x[i] = ofRandomWidth();
         y[i] = ofRandomHeight();
     }
     
 }
+
+float SceneEye::normRandom() {
+    float a = 1 - ofRandom(1);
+    float b = 1 - ofRandom(1);
+    float c = sqrt(-2 * log(a));
+    if (0.5 - ofRandom(1) > 0) {
+        return c * sin(2*b);
+    } else {
+        return c * cos(2*b);
+    }
+}
+
 
 //--------------------------------------------------------------
 
@@ -43,24 +55,24 @@ void SceneEye::update(){
 
 //--------------------------------------------------------------
 void SceneEye::draw(){
-    if (fftSmoothed[40] > 0.035) {
+    if (fftSmoothed[40] - preVol > 0.04) {
         reset();
         mouseX = ofRandom(ofGetWidth());
         mouseY = ofRandom(ofGetHeight());
         inv = true;
     }
-//    if (inv) {
-//        c1.invert();
-//        c2.invert();
-//        bg.invert();
-//    }
+    if (inv) {
+        c1.invert();
+        c2.invert();
+        bg.invert();
+    }
 
     ofSetColor(bg);
     ofDrawRectangle(0, 0, width, height);
     
     for (int i=0; i<n; i++) {
-        float dx = mouseX - x[i];
-        float dy = mouseY - y[i];
+        float dx = mouseX - x[i] + fftSmoothed[40]*1000;
+        float dy = mouseY - y[i] + fftSmoothed[40]*1000;
         
         float d = sqrt(dx*dx + dy*dy);
         if (d < 1) d = 1;
@@ -86,13 +98,13 @@ void SceneEye::draw(){
         
         ofDrawCircle(x[i], y[i], 2);
     }
-    
-//    if (inv) {
-//        c1.invert();
-//        c2.invert();
-//        bg.invert();
-//        inv = false;
-//    }
+    preVol = fftSmoothed[40];
+    if (inv) {
+        c1.invert();
+        c2.invert();
+        bg.invert();
+        inv = false;
+    }
 
 }
 

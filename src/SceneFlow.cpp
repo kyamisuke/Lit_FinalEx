@@ -36,9 +36,14 @@ void SceneFlow::update(){
 
 //--------------------------------------------------------------
 void SceneFlow::draw(){
+    float randomx = 1;
+    float randomy = 1;
+
     if (fftSmoothed[40] - preVol > 0.03) {
         ofSetColor(255, 32);
         ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
+        randomx = ofRandom(-1, 1);
+        randomy = ofRandom(-1, 1);
         inv = true;
     } else {
         ofSetColor(0, 32);
@@ -57,7 +62,7 @@ void SceneFlow::draw(){
             inv = true;
         }
         ofSetColor(c);
-        ofDrawCircle(circle*cos(i)+fftSmoothed[40]*400, circle*sin(i)+fftSmoothed[40]*400, r);
+        ofDrawCircle(circle*cos(i)+fftSmoothed[40]*1000*randomx, circle*sin(i)+fftSmoothed[40]*1000*randomy, r);
         preVol = fftSmoothed[40];
 //        ofPushMatrix();
 //        ofTranslate(circle*cos(i)+fftSmoothed[40]*400, circle*sin(i)+fftSmoothed[40]*400);
