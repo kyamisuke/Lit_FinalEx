@@ -53,7 +53,7 @@ void SceneText::setup(){
     str.push_back("DJ kyami");
     str.push_back("I create song");
     str.push_back("-Broken Heart-");
-    //str.push_back("💔");
+
     
     fbo.allocate(ofGetWidth(), ofGetHeight(), GL_RGBA);
     //reset();
