@@ -8,7 +8,6 @@ void ofApp::setup(){
     sound.load("Broken Heart.mp3");
     sound.setVolume(1.0);
     sound.setLoop(true);
-    sound.play();
 
     baseScene* sTe  = new SceneText();
     baseScene* sT   = new SceneTree();
@@ -20,9 +19,9 @@ void ofApp::setup(){
     scenes.push_back(sTe);
     scenes.push_back(sT);
     scenes.push_back(sW);
+    scenes.push_back(sE);
     scenes.push_back(sF);
     scenes.push_back(sL);
-    scenes.push_back(sE);
     currentScene = 0;
     scenes[currentScene]->setup();
 }
@@ -48,6 +47,8 @@ void ofApp::keyPressed(int key){
         currentScene = 4;
     } else if (key == '3') {
         currentScene = 5;
+    } else if (key == 'r') {
+        currentScene = 2;
     }
     scenes[currentScene]->setup();
 }
@@ -70,6 +71,10 @@ void ofApp::mouseDragged(int x, int y, int button){
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
     scenes[currentScene]->mousePressed(x, y, button);
+    if (first){
+        sound.play();
+        first = false;
+    }
 }
 
 //--------------------------------------------------------------

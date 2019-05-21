@@ -39,7 +39,7 @@ void SceneFlow::draw(){
     float randomx = 1;
     float randomy = 1;
 
-    if (fftSmoothed[40] - preVol > 0.03) {
+    if (fftSmoothed[40] - preVol > 0.005) {
         ofSetColor(255, 32);
         ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight());
         randomx = ofRandom(-1, 1);

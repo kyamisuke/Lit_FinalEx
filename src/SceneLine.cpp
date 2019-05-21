@@ -64,7 +64,7 @@ void SceneLine::draw(){
     c3.a = alpha1;
     
     // invert color
-    if (fftSmoothed[40] - preVol > 0.03) {
+    if (fftSmoothed[40] - preVol > 0.005) {
         v1 = ofRandom(0.4) + 0.2;
         inv = true;
         c1.invert();
@@ -75,7 +75,7 @@ void SceneLine::draw(){
         //c3.a = 255;
         bg.invert();
     }
-    if (fftSmoothed[40] - preVol > 0.01) {
+    if (fftSmoothed[40] - preVol > 0.005) {
         biasx = ofRandom(-1, 1);
         biasy = ofRandom(-1, 1);
     }

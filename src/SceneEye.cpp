@@ -55,7 +55,7 @@ void SceneEye::update(){
 
 //--------------------------------------------------------------
 void SceneEye::draw(){
-    if (fftSmoothed[40] - preVol > 0.03) {
+    if (fftSmoothed[40] - preVol > 0.005) {
         reset();
         mouseX = ofRandom(ofGetWidth());
         mouseY = ofRandom(ofGetHeight());
